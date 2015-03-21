@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading bar demo</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body style="color: white; font-family: 'Helvetic Neue', Helvetica, Arial; background: #eee url('pagebg.jpg') no-repeat; background-size: cover; height: 100%">
+<div class="loading">
+    <div class="loading-up"></div>
+    <div class="loading-down"></div>
+    <div class="loading-bar">
+        <div class="loading-bar-fill"></div>
+    </div>
+</div>
+<h1>Loading animation demo</h1>
+<p>When you clicked the loading animation, it ran a transition
+and at the end of the transition a small Javascript code removed
+the DOM node altogether.</p>
+<p><a href="javascript:window.location.reload()">Refresh</a> the page to see the effect again.</p>
+<script>
+    var loading = document.querySelector('.loading');
+    loading.onclick = function (e) {
+        loading.classList.toggle('hide');
+    };
+    loading.addEventListener('transitionend', function () {
+        loading.remove();
+    });
+</script>
+</body>
+</html>
