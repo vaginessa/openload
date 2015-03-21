@@ -1,0 +1,83 @@
+openSpeed = 500ms
+openEase = ease-in
+loadingDuration = 15000ms
+loadingColor = white
+
+/* The animation code */
+@keyframes loading-bar-fill-animation {
+  0%   {width: 5%}
+  10%  {width: 35%}
+  25%  {width: 40%}
+  50%  {width: 50%}
+  51%  {width: 60%}
+  60%  {width: 70%}
+  61%  {width: 75%}
+  75%  {width: 95%}
+  90%  {width: 99%}
+  100% {width: 100%}
+}
+
+.loading
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color loadingColor
+  opacity 1
+  transition background-color openSpeed openEase
+  z-index 999999
+
+  &.hide
+    background-color alpha(loadingColor, 0)
+
+  &-up
+    position absolute
+    background-image url('image-up.jpg')
+    background-size cover
+    background-position bottom
+    height 50%
+    width 100%
+    top 0%
+    transition-property top
+    transition-timing-function inherit
+    transition-duration inherit
+
+    .hide > &
+      top -50%
+
+  &-down
+    position absolute
+    background-image url('image-down.jpg')
+    background-size cover
+    background-position top
+    height 50%
+    width 100%
+    bottom 0%
+    transition-property bottom
+    transition-timing-function inherit
+    transition-duration inherit
+
+    .hide > &
+      bottom -50%
+
+  &-bar
+    height 1px
+    position absolute
+    top 50%
+    left 0
+    right 0
+    background-color rgba(0, 0, 0, 0.8)
+    border 1px inset rgba(255,255,255,0.4)
+    border-left none
+    border-right none
+
+    .hide > &
+      opacity 0
+
+    &-fill
+      background-color loadingColor
+      box-shadow 0 0 7px loadingColor
+      width 0%
+      height 100%
+      animation loading-bar-fill-animation loadingDuration infinite
