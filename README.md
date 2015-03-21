@@ -9,6 +9,9 @@ It is parametric and you can edit the parameters at the top of the provided Styl
 #How does it work?
 
 The loading background image is divided into two tags.
+The loading bar has some engaging animation to simulate the feeling of progress.
+Once the page is loaded, simply add a 'hide' class and at the end of the transition
+remove the '.loading' tag. See index.html for a simple script that does that.
 
 #Copyright
 
