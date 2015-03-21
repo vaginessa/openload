@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <title>Loading bar demo</title>
     <link rel="stylesheet" href="index.css"/>
+    <style>
+        /* Note: these styles have nothing to do with the loading animation. They are just for this demo page */
+        body {
+            color: white;
+            font-family: 'Helvetic Neue', Helvetica, Arial;
+            background: #eee url('pagebg.jpg') no-repeat;
+            background-size: cover;
+        }
+        a {
+            color: inherit;
+        }
+        a:hover {
+            color: inherit;
+        }
+    </style>
 </head>
-<body style="color: white; font-family: 'Helvetic Neue', Helvetica, Arial; background: #eee url('pagebg.jpg') no-repeat; background-size: cover;">
+<body>
 <div class="loading">
     <div class="loading-up"><div class="loading-up-bg"></div></div>
     <div class="loading-down"><div class="loading-down-bg"></div></div>
@@ -19,6 +34,8 @@ the DOM node altogether.</p>
 <h2>How to use it?</h2>
 <p>See <a href="https://github.com/hanifbbz/openload">project repository</a>
 on github for more information about how to use this code.</p>
+<h2>Author</h2>
+<p><a href="https://twitter.com/alexewerlof">Alex Ewerlöf</a></p>
 <script>
     var loading = document.querySelector('.loading');
     //Hide the loading bar when it is clicked
