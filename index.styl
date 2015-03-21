@@ -3,6 +3,11 @@ openEase = ease-in
 loadingDuration = 15000ms
 loadingColor = white
 
+animation(args...)
+  -webkit-animation args
+  -moz-animation args
+  animation args
+
 /* The animation code */
 @keyframes loading-bar-fill-animation {
   0%   {width: 5%}

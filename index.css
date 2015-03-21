@@ -78,6 +78,8 @@
   box-shadow: 0 0 7px #fff;
   width: 0%;
   height: 100%;
+  -webkit-animation: loading-bar-fill-animation 15000ms infinite;
+  -moz-animation: loading-bar-fill-animation 15000ms infinite;
   animation: loading-bar-fill-animation 15000ms infinite;
 }
 @-moz-keyframes loading-bar-fill-animation {
