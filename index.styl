@@ -33,33 +33,49 @@ loadingColor = white
 
   &-up
     position absolute
-    background-image url('image-up.jpg')
-    background-size cover
-    background-position bottom
     height 50%
     width 100%
     top 0%
     transition-property top
     transition-timing-function inherit
     transition-duration inherit
+    overflow hidden
 
     .hide > &
       top -50%
 
+    &-bg
+      background-image url('image.jpg')
+      background-repeat no-repeat
+      background-size cover
+      position absolute
+      height 200%
+      top 0
+      width 100%
+      background-position: center center;
+
   &-down
     position absolute
-    background-image url('image-down.jpg')
-    background-size cover
-    background-position top
     height 50%
     width 100%
     bottom 0%
     transition-property bottom
     transition-timing-function inherit
     transition-duration inherit
+    overflow hidden
 
     .hide > &
       bottom -50%
+
+    &-bg
+      background-image url('image.jpg')
+      background-repeat no-repeat
+      background-size cover
+      position absolute
+      height 200%
+      bottom 0
+      width 100%
+      background-position: center center;
 
   &-bar
     height 1px
